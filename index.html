@@ -34,19 +34,25 @@
             margin-top: 10px;
             font-size: 32px;
         }
-        .intro-text {
-            max-width: 800px;
+        .intro {
             background: rgba(255, 255, 255, 0.2);
             padding: 15px;
-            margin-bottom: 20px;
             border-radius: 15px;
             text-align: center;
-        }
-        .intro-text p {
+            max-width: 700px;
+            margin-bottom: 20px;
             color: #FFFFFF;
+        }
+        .intro a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+        .intro a:hover {
+            text-decoration: underline;
         }
         .hotel-card {
             background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
             color: #FFFFFF;
             padding: 15px;
             margin: 10px;
@@ -56,11 +62,23 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             text-align: center;
         }
-        .hotel-card img { width: 100%; height: auto; border-radius: 15px; }
-        .hotel-card h2 { margin: 10px 0; font-size: 24px; }
-        .hotel-card p { font-size: 16px; }
-        .hotel-card a { display: inline-block; background: #ffd700; color: #000; padding: 10px 20px; text-decoration: none; border-radius: 10px; transition: background 0.3s; }
-        .hotel-card a:hover { background: #ffc107; }
+        .hotel-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+        .hotel-card a {
+            display: inline-block;
+            background: #ffd700;
+            color: #000;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background 0.3s;
+        }
+        .hotel-card a:hover {
+            background: #ffc107;
+        }
     </style>
 </head>
 <body>
@@ -69,9 +87,9 @@
         <h1>BitHotels - Crypto-Friendly Hotels</h1>
     </div>
 
-    <div class="intro-text">
+    <div class="intro">
         <p>Welcome to BitHotels - Your destination for crypto-friendly hotel bookings. Pay with your favorite cryptocurrencies easily and securely.</p>
-        <a href="BitHotels_Blog.html" class="blog-link">Learn More About Crypto Payments</a>
+        <a href="BitHotels_Blog.html">Learn More About Crypto Payments</a>
     </div>
 
     <div class="hotel-card">
