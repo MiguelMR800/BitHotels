@@ -3,83 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover crypto-friendly hotels around the world with BitHotels">
+    <meta name="description" content="Crypto-Friendly Hotels">
     <title>BitHotels - Crypto-Friendly Hotels</title>
     <style>
         body {
-            background: linear-gradient(to bottom, #663399, #FF8C00);
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            background: linear-gradient(to bottom, #8A2BE2, #FFD700);
+            color: #FFFFFF;
             text-align: center;
-            color: white;
-        }
-        header {
-            padding: 20px;
-        }
-        header img {
-            width: 200px;
-            height: auto;
+            margin: 0;
         }
         h1 {
-            font-size: 2em;
-            margin: 10px 0;
+            margin-top: 20px;
         }
-        .hotel-card {
+        .hotel {
             background-color: #4B0082;
-            margin: 20px;
-            padding: 15px;
-            border-radius: 10px;
-            border: 2px solid #FFD700;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 15px;
+            max-width: 400px;
         }
-        .hotel-card img {
+        img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
+            height: auto;
+            border-radius: 10px;
         }
-        .hotel-card h2 {
-            font-size: 1.5em;
-            margin: 10px 0;
-        }
-        .hotel-card p {
-            font-size: 1em;
-        }
-        .hotel-card a {
+        .book-btn {
+            display: inline-block;
+            padding: 10px 20px;
             background-color: #FFD700;
             color: #4B0082;
-            padding: 10px 15px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="BitHotels_Logo.png" alt="BitHotels Logo">
-        <h1>BitHotels - Crypto-Friendly Hotels</h1>
-    </header>
+    <h1>BitHotels - Crypto-Friendly Hotels</h1>
 
-    <div class="hotel-card">
-        <img src="hotel1.jpg" alt="Luxury Beach Hotel">
+    <div class="hotel">
         <h2>Luxury Beach Hotel</h2>
+        <img src="Luxury_Beach_Hotel.jpg" alt="Luxury Beach Hotel">
         <p>A stunning beach destination.</p>
-        <a href="#">Book Now</a>
+        <a href="#" class="book-btn">Book Now</a>
     </div>
 
-    <div class="hotel-card">
-        <img src="hotel2.jpg" alt="City Lights Hotel">
+    <div class="hotel">
         <h2>City Lights Hotel</h2>
+        <img src="City_Lights_Hotel.jpg" alt="City Lights Hotel">
         <p>A modern hotel in the city center.</p>
-        <a href="#">Book Now</a>
+        <a href="#" class="book-btn">Book Now</a>
     </div>
 
-    <div class="hotel-card">
-        <img src="hotel3.jpg" alt="Mountain Retreat">
+    <div class="hotel">
         <h2>Mountain Retreat</h2>
+        <img src="Mountain_Retreat.jpg" alt="Mountain Retreat">
         <p>A relaxing mountain escape.</p>
-        <a href="#">Book Now</a>
+        <a href="#" class="book-btn">Book Now</a>
     </div>
 </body>
 </html>
