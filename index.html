@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BitHotels - Crypto-Friendly Hotels">
-    <title>BitHotels - Crypto-Friendly Hotels</title>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="BitHotels - Crypto-Friendly Hotels" name="description"/>
+<title>BitHotels - Crypto-Friendly Hotels</title>
+<style>
         body { 
             font-family: Arial, sans-serif; 
             background: linear-gradient(to bottom, #f46b45, #eea849); 
@@ -61,51 +62,54 @@
     </style>
 </head>
 <body>
-    <div class="header">
-        <img src="BitHotels_Logo.png" alt="BitHotels Logo">
-        <h1>BitHotels - Crypto-Friendly Hotels</h1>
-        <p>Welcome to BitHotels - Your destination for crypto-friendly hotel bookings. Pay with your favorite cryptocurrencies easily and securely.</p>
-        <a href="BitHotels_Blog.html">Learn More About Crypto Payments</a>
-    </div>
-
-    <div class="hotel-card">
-        <img src="Luxury_Beach_Hotel.jpg" alt="Luxury Beach Hotel">
-        <h2>Luxury Beach Hotel</h2>
-        <p>A stunning beach destination.</p>
-        <a href="https://expedia.com/affiliate/ew7YoPz">Book Now</a>
-    </div>
-
-    <div class="hotel-card">
-        <img src="City_Lights_Hotel.jpg" alt="City Lights Hotel">
-        <h2>City Lights Hotel</h2>
-        <p>A modern hotel in the city center.</p>
-        <a href="https://expedia.com/affiliate/ew7YoPz">Book Now</a>
-    </div>
-
-    <div class="hotel-card">
-        <img src="Mountain_Retreat.jpg" alt="Mountain Retreat">
-        <h2>Mountain Retreat</h2>
-        <p>A relaxing mountain escape.</p>
-        <a href="https://locktrip.com?refId=435404">Book Now</a>
-    </div>
-
-    <div class="chat-widget" onclick="toggleChat()">💬 How can I help you?</div>
-
-    <div class="chat-box" id="chatBox">
-        <h3>How can I help you with your crypto-friendly booking?</h3>
-        <ul>
-            <li>How do I pay with crypto?</li>
-            <li>What are the supported cryptocurrencies?</li>
-            <li>Are there any discounts for crypto payments?</li>
-        </ul>
-        <button onclick="toggleChat()">Close</button>
-    </div>
-
-    <script>
+<div class="header">
+<img alt="BitHotels Logo" src="BitHotels_Logo.png"/>
+<h1>BitHotels - Crypto-Friendly Hotels</h1>
+<p>Welcome to BitHotels - Your destination for crypto-friendly hotel bookings. Pay with your favorite cryptocurrencies easily and securely.</p>
+<a href="BitHotels_Blog.html">Learn More About Crypto Payments</a>
+</div>
+<div class="hotel-card">
+<img alt="Luxury Beach Hotel" src="Luxury_Beach_Hotel.jpg"/>
+<h2>Luxury Beach Hotel</h2>
+<p>A luxurious beachfront destination offering world-class amenities and stunning ocean views. Enjoy the sun, sea, and the best of tropical hospitality.</p>
+<a href="https://expedia.com/affiliate/ew7YoPz">Book Now</a>
+</div>
+<div class="hotel-card">
+<img alt="City Lights Hotel" src="City_Lights_Hotel.jpg"/>
+<h2>City Lights Hotel</h2>
+<p>An upscale city-center hotel with modern facilities, breathtaking city views, and a vibrant nightlife just outside your door.</p>
+<a href="https://expedia.com/affiliate/ew7YoPz">Book Now</a>
+</div>
+<div class="hotel-card">
+<img alt="Mountain Retreat" src="Mountain_Retreat.jpg"/>
+<h2>Mountain Retreat</h2>
+<p>A tranquil mountain retreat perfect for nature lovers, offering cozy cabins, scenic views, and outdoor activities.</p>
+<a href="https://locktrip.com?refId=435404">Book Now</a>
+</div>
+<div class="chat-widget" onclick="toggleChat()">💬 How can I help you?</div>
+<div class="chat-box" id="chatBox">
+<h3>How can I help you with your crypto-friendly booking?</h3>
+<ul>
+<li><button onclick="respondToQuestion('How do I pay with crypto?')">How do I pay with crypto?</button></li>
+<li><button onclick="respondToQuestion('What are the supported cryptocurrencies?')">What are the supported cryptocurrencies?</button></li>
+<li><button onclick="respondToQuestion('Are there any discounts for crypto payments?')">Are there any discounts for crypto payments?</button></li>
+</ul>
+<button onclick="toggleChat()">Close</button>
+</div>
+<script>
         function toggleChat() {
             const chatBox = document.getElementById('chatBox');
             chatBox.style.display = chatBox.style.display === 'none' ? 'block' : 'none';
         }
-    </script>
+
+        function respondToQuestion(question) {
+            const responses = {
+                'How do I pay with crypto?': 'To pay with crypto, choose a hotel, select crypto as your payment method, and complete the transaction with your crypto wallet.',
+                'What are the supported cryptocurrencies?': 'We support Bitcoin (BTC), Ethereum (ETH), Binance Coin (BNB), USDT (Tether), and USD Coin (USDC).',
+                'Are there any discounts for crypto payments?': 'Some hotels may offer exclusive discounts for crypto payments. Please check the hotel details.'
+            };
+            alert(responses[question] || 'Sorry, I cannot answer that question right now.');
+        }
+</script>
 </body>
 </html>
