@@ -6,48 +6,63 @@
     <meta name="description" content="BitHotels - Crypto-Friendly Hotels">
     <title>BitHotels - Crypto-Friendly Hotels</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #f46b45, #eea849);
-            display: flex;
+        body { 
+            font-family: Arial, sans-serif; 
+            background: linear-gradient(to bottom, #f46b45, #eea849); 
+            display: flex; 
             flex-direction: column;
-            align-items: center;
+            align-items: center; 
             padding: 20px;
             margin: 0;
         }
-        .header, .hotel-card { 
-            background: rgba(255, 255, 255, 0.3); 
+        .header {
+            background: rgba(255, 255, 255, 0.3);
             backdrop-filter: blur(10px);
             border-radius: 20px;
             padding: 20px;
+            text-align: center;
             max-width: 800px;
             margin-bottom: 20px;
-            text-align: center;
+        }
+        .header img {
+            width: 250px;
+            border-radius: 20px;
+        }
+        .header h1 {
+            color: #FFFFFF;
+            font-size: 32px;
+        }
+        .hotel-card {
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            margin: 10px;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 20px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
-        .header img { width: 150px; }
         .hotel-card img { width: 100%; border-radius: 15px; }
-        .hotel-card h2 { font-size: 24px; }
-        .chat-widget {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #4b0082;
-            color: #fff;
-            padding: 15px;
-            border-radius: 20px;
-            cursor: pointer;
+        .chat-widget { 
+            position: fixed; 
+            bottom: 20px; 
+            right: 20px; 
+            background: #4b0082; 
+            color: #fff; 
+            padding: 10px 20px; 
+            border-radius: 50px; 
+            cursor: pointer; 
         }
         .chat-box {
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            width: 300px;
-            background: #ffffff;
-            border-radius: 10px;
-            display: none;
+            display: none; 
+            position: fixed; 
+            bottom: 80px; 
+            right: 20px; 
+            width: 300px; 
+            background: #fff; 
+            padding: 15px; 
+            border-radius: 10px; 
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            padding: 10px;
         }
     </style>
 </head>
@@ -66,27 +81,15 @@
         <a href="https://expedia.com/affiliate/ew7YoPz">Book Now</a>
     </div>
 
-    <div class="hotel-card">
-        <img src="City_Lights_Hotel.jpg" alt="City Lights Hotel">
-        <h2>City Lights Hotel</h2>
-        <p>A modern hotel in the city center.</p>
-        <a href="https://expedia.com/affiliate/ew7YoPz">Book Now</a>
-    </div>
-
-    <div class="hotel-card">
-        <img src="Mountain_Retreat.jpg" alt="Mountain Retreat">
-        <h2>Mountain Retreat</h2>
-        <p>A relaxing mountain escape.</p>
-        <a href="https://locktrip.com?refId=435404">Book Now</a>
-    </div>
-
     <div class="chat-widget" onclick="toggleChat()">💬 How can I help you?</div>
 
     <div class="chat-box" id="chatBox">
-        <p><strong>How can I help you with your crypto-friendly booking?</strong></p>
-        <p>- How do I pay with crypto?</p>
-        <p>- What are the supported cryptocurrencies?</p>
-        <p>- Are there any discounts for crypto payments?</p>
+        <h3>How can I help you with your crypto-friendly booking?</h3>
+        <ul>
+            <li>How do I pay with crypto?</li>
+            <li>What are the supported cryptocurrencies?</li>
+            <li>Are there any discounts for crypto payments?</li>
+        </ul>
         <button onclick="toggleChat()">Close</button>
     </div>
 
