@@ -60,88 +60,41 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
     
-.chat-widget { 
-    position: fixed; 
-    bottom: 20px; 
-    right: 20px; 
-    background: #4b0082; 
-    color: #fff; 
-    padding: 10px 20px; 
-    border-radius: 50px; 
-    cursor: pointer; 
+.header {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.header p {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #4b0082;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
     font-weight: bold;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: background 0.3s;
 }
 
-.chat-widget:hover {
+.cta-button:hover {
     background: #5a00a3;
-}
-
-.chat-box {
-    display: none; 
-    position: fixed; 
-    bottom: 80px; 
-    right: 20px; 
-    width: 320px; 
-    background: rgba(255, 255, 255, 0.9);
-    padding: 15px; 
-    border-radius: 15px; 
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.chat-box h3 {
-    color: #333;
-    font-weight: bold;
-}
-
-.chat-box button {
-    background: #f46b45;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    margin-top: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
-    transition: background 0.3s;
-}
-
-.chat-box button:hover {
-    background: #eea849;
-}
-
-.chat-box ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.chat-box li {
-    margin-bottom: 10px;
-}
-
-.chat-response {
-    display: none;
-    position: fixed;
-    bottom: 150px;
-    right: 20px;
-    width: 320px;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    font-size: 14px;
-    color: #333;
-    font-family: Arial, sans-serif;
-    line-height: 1.4;
-}
-
-.chat-response p {
-    margin: 0;
-    padding: 5px 0;
-    color: #4b0082;
-    font-weight: bold;
 }
 </style>
 </head>
@@ -149,9 +102,12 @@
 <div class="header">
 <img alt="BitHotels Logo" src="BitHotels_Logo.png"/>
 <h1>BitHotels - Crypto-Friendly Hotels</h1>
-<p>Welcome to BitHotels - Your destination for crypto-friendly hotel bookings. Pay with your favorite cryptocurrencies easily and securely.</p>
+<p>
+Explore a world of travel freedom with BitHotels. Discover exclusive destinations that accept cryptocurrency payments, 
+offering you secure, fast, and borderless transactions. Say goodbye to hidden fees and currency conversion costs. Travel smarter, pay with crypto.
+</p>
 <a href="BitHotels_Blog.html">Learn More About Crypto Payments</a>
-</div>
+<a class="cta-button" href="BitHotels_Blog.html">Discover Crypto-Friendly Hotels Now</a></div>
 <div class="hotel-card">
 <img alt="Luxury Beach Hotel" src="Luxury_Beach_Hotel.jpg"/>
 <h2>Luxury Beach Hotel</h2>
@@ -181,26 +137,19 @@
 <button onclick="toggleChat()">Close</button>
 </div>
 <script>
-function toggleChat() {
-    const chatBox = document.getElementById('chatBox');
-    chatBox.style.display = chatBox.style.display === 'none' ? 'block' : 'none';
-}
+        function toggleChat() {
+            const chatBox = document.getElementById('chatBox');
+            chatBox.style.display = chatBox.style.display === 'none' ? 'block' : 'none';
+        }
 
-function respondToQuestion(question) {
-    const responses = {
-        'How do I pay with crypto?': 'To pay with crypto, choose a hotel, select crypto as your payment method, and complete the transaction with your crypto wallet.',
-        'What are the supported cryptocurrencies?': 'We support Bitcoin (BTC), Ethereum (ETH), Binance Coin (BNB), USDT (Tether), and USD Coin (USDC).',
-        'Are there any discounts for crypto payments?': 'Some hotels may offer exclusive discounts for crypto payments. Please check the hotel details.'
-    };
-    
-    const responseBox = document.getElementById('chatResponse');
-    responseBox.innerHTML = '<p>' + (responses[question] || 'Sorry, I cannot answer that question right now.') + '</p>';
-    responseBox.style.display = 'block';
-    
-    setTimeout(() => {
-        responseBox.style.display = 'none';
-    }, 5000);
-}
+        function respondToQuestion(question) {
+            const responses = {
+                'How do I pay with crypto?': 'To pay with crypto, choose a hotel, select crypto as your payment method, and complete the transaction with your crypto wallet.',
+                'What are the supported cryptocurrencies?': 'We support Bitcoin (BTC), Ethereum (ETH), Binance Coin (BNB), USDT (Tether), and USD Coin (USDC).',
+                'Are there any discounts for crypto payments?': 'Some hotels may offer exclusive discounts for crypto payments. Please check the hotel details.'
+            };
+            alert(responses[question] || 'Sorry, I cannot answer that question right now.');
+        }
 </script>
-<div class="chat-response" id="chatResponse"></div></body>
+</body>
 </html>
