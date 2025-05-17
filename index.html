@@ -137,7 +137,33 @@ offering you secure, fast, and borderless transactions. Say goodbye to hidden fe
 <button onclick="toggleChat()">Close</button>
 </div>
 <script>
-        function toggleChat() {
+        
+function toggleChat() {
+    const chatBox = document.getElementById('chatBox');
+    chatBox.classList.toggle('open');
+}
+
+function respondToQuestion(question) {
+    const chatMessages = document.getElementById('chatMessages');
+    let response = '';
+
+    if (question === 'How do I pay with crypto?') {
+        response = 'To pay with crypto, choose a hotel, select crypto as your payment method, and complete the transaction with your crypto wallet.';
+    } else if (question === 'What are the supported cryptocurrencies?') {
+        response = 'We support Bitcoin (BTC), Ethereum (ETH), Binance Coin (BNB), USDT (Tether), and USD Coin (USDC).';
+    } else if (question === 'Are there any discounts for crypto payments?') {
+        response = 'Some hotels may offer exclusive discounts for crypto payments. Please check the hotel details.';
+    } else {
+        response = 'Sorry, I cannot answer that question right now.';
+    }
+
+    const messageDiv = document.createElement('div');
+    messageDiv.classList.add('chat-message');
+    messageDiv.innerHTML = '<strong>You:</strong> ' + question + '<br/><strong>Bot:</strong> ' + response;
+    chatMessages.appendChild(messageDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
             const chatBox = document.getElementById('chatBox');
             chatBox.style.display = chatBox.style.display === 'none' ? 'block' : 'none';
         }
