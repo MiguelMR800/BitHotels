@@ -96,6 +96,47 @@
 .cta-button:hover {
     background: #5a00a3;
 }
+
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    max-width: 350px;
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+}
+
+.chat-widget h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4b0082;
+}
+
+.chat-widget button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    background: #4b0082;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.chat-widget button:hover {
+    background: #5a00a3;
+}
+
+.chat-widget button:focus {
+    outline: none;
+}
 </style>
 </head>
 <body>
@@ -106,8 +147,8 @@
 Explore a world of travel freedom with BitHotels. Discover exclusive destinations that accept cryptocurrency payments, 
 offering you secure, fast, and borderless transactions. Say goodbye to hidden fees and currency conversion costs. Travel smarter, pay with crypto.
 </p>
-<a href="BitHotels_Blog.html">Learn More About Crypto Payments</a>
-<a class="cta-button" href="BitHotels_Blog.html">Discover Crypto-Friendly Hotels Now</a></div>
+
+</div>
 <div class="hotel-card">
 <img alt="Luxury Beach Hotel" src="Luxury_Beach_Hotel.jpg"/>
 <h2>Luxury Beach Hotel</h2>
@@ -126,7 +167,6 @@ offering you secure, fast, and borderless transactions. Say goodbye to hidden fe
 <p>A tranquil mountain retreat perfect for nature lovers, offering cozy cabins, scenic views, and outdoor activities.</p>
 <a href="https://locktrip.com?refId=435404">Book Now</a>
 </div>
-<div class="chat-widget" onclick="toggleChat()">💬 How can I help you?</div>
 <div class="chat-box" id="chatBox">
 <h3>How can I help you with your crypto-friendly booking?</h3>
 <ul>
@@ -151,5 +191,12 @@ offering you secure, fast, and borderless transactions. Say goodbye to hidden fe
             alert(responses[question] || 'Sorry, I cannot answer that question right now.');
         }
 </script>
+<div class="chat-widget">
+<h3>How can I help you with your crypto-friendly booking?</h3>
+<button onclick="alert('You can pay with crypto using supported wallets.')">How do I pay with crypto?</button>
+<button onclick="alert('Supported cryptocurrencies are BTC, ETH, BNB, USDT, and USDC.')">What are the supported cryptocurrencies?</button>
+<button onclick="alert('Crypto payments may offer discounts depending on the hotel.')">Are there any discounts for crypto payments?</button>
+<button onclick="this.parentElement.style.display='none'">Close</button>
+</div>
 </body>
 </html>
