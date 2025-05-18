@@ -97,6 +97,91 @@
     background: #5a00a3;
 }
 </style>
+
+<style>
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #4b0082;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.chat-widget:hover {
+    background: #5a00a3;
+    transform: scale(1.05);
+}
+
+.chat-box {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 320px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+}
+
+.chat-messages {
+    max-height: 250px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.chat-messages div {
+    margin-bottom: 5px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.chat-messages .user {
+    background: #4b0082;
+    color: #ffffff;
+    text-align: right;
+}
+
+.chat-box input {
+    width: 70%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.chat-box button {
+    width: 25%;
+    padding: 8px;
+    background: #4b0082;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.chat-box button:hover {
+    background: #5a00a3;
+}
+
+/* Sivun otsikkokuvan tyylit */
+.header img {
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+</style>
 </head>
 <body>
 <div class="header">
@@ -125,10 +210,6 @@ offering you secure, fast, and borderless transactions. Say goodbye to hidden fe
 <p>A tranquil mountain retreat perfect for nature lovers, offering cozy cabins, scenic views, and outdoor activities.</p>
 <a href="https://locktrip.com?refId=435404">Book Now</a>
 </div>
-
-
-
-
 <div class="chat-widget" onclick="toggleChat()" style="position: fixed; bottom: 20px; right: 20px; background: #4b0082; color: #fff; padding: 12px 20px; border-radius: 25px; cursor: pointer; font-weight: bold;">
     💬 Chat with us
 </div>
