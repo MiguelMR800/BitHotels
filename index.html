@@ -97,130 +97,6 @@
     background: #5a00a3;
 }
 </style>
-<style>
-.chat-widget {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #4b0082;
-    color: #fff;
-    padding: 12px 25px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: background 0.3s;
-}
-
-.chat-widget:hover {
-    background: #5a00a3;
-}
-
-.chat-box {
-    display: none;
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    width: 320px;
-    max-height: 400px;
-    background: #ffffff;
-    color: #000;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    overflow-y: auto;
-    flex-direction: column;
-    transition: opacity 0.4s, transform 0.4s;
-}
-.chat-box.open {
-    display: flex;
-    opacity: 1;
-    transform: translateY(0);
-}
-.chat-messages {
-    max-height: 300px;
-    overflow-y: auto;
-}
-</style>
-
-<style>
-.chat-widget {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #4b0082;
-    color: #fff;
-    padding: 12px 25px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: background 0.3s, transform 0.3s;
-    z-index: 1000;
-}
-
-.chat-widget:hover {
-    background: #5a00a3;
-}
-
-.chat-box {
-    display: none;
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    width: 320px;
-    max-height: 400px;
-    background: #ffffff;
-    color: #000;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    overflow-y: auto;
-    flex-direction: column;
-    transition: opacity 0.4s, transform 0.4s;
-    z-index: 1000;
-}
-
-.chat-box.open {
-    display: flex;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.chat-messages {
-    max-height: 250px;
-    overflow-y: auto;
-    margin-bottom: 10px;
-}
-
-.chat-box input {
-    width: 80%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.chat-box button {
-    width: 18%;
-    padding: 8px;
-    background: #4b0082;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.chat-box button:hover {
-    background: #5a00a3;
-}
-</style>
 </head>
 <body>
 <div class="header">
@@ -249,66 +125,25 @@ offering you secure, fast, and borderless transactions. Say goodbye to hidden fe
 <p>A tranquil mountain retreat perfect for nature lovers, offering cozy cabins, scenic views, and outdoor activities.</p>
 <a href="https://locktrip.com?refId=435404">Book Now</a>
 </div>
-<div class="chat-widget" onclick="toggleChat()">
-<span>💬</span><span>Chat with us</span>
-</div>
-<div class="chat-box" id="chatBox" style="display: none;">
-<div class="chat-messages" id="chatMessages"></div>
-<input id="userMessage" onkeydown="if(event.key === 'Enter') sendMessage()" placeholder="Type your message..." type="text"/>
-<button onclick="sendMessage()">Send</button>
-</div>
-<script>
-function toggleChat() {
-    const chatBox = document.getElementById('chatBox');
-    chatBox.classList.toggle('open');
-}
 
-function sendMessage() {
-    const userMessage = document.getElementById('userMessage').value.trim();
-    if (userMessage === "") return;
 
-    const chatMessages = document.getElementById('chatMessages');
-    const userDiv = document.createElement('div');
-    userDiv.classList.add('chat-message', 'user');
-    userDiv.textContent = userMessage;
-    chatMessages.appendChild(userDiv);
 
-    const botDiv = document.createElement('div');
-    botDiv.classList.add('chat-message');
-    botDiv.textContent = getBotResponse(userMessage);
-    chatMessages.appendChild(botDiv);
 
-    document.getElementById('userMessage').value = "";
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-}
-
-function getBotResponse(message) {
-    message = message.toLowerCase();
-    if (message.includes("crypto")) {
-        return "You can pay with Bitcoin, Ethereum, and other popular cryptocurrencies.";
-    } else if (message.includes("discount")) {
-        return "Some hotels offer discounts for crypto payments. Check each listing.";
-    } else if (message.includes("cancel")) {
-        return "Cancellation policies depend on the hotel. Please check your booking details.";
-    } else {
-        return "I'm here to help with your crypto-friendly booking!";
-    }
-}
-</script>
-
-<div class="chat-widget" onclick="toggleChat()">
+<div class="chat-widget" onclick="toggleChat()" style="position: fixed; bottom: 20px; right: 20px; background: #4b0082; color: #fff; padding: 12px 20px; border-radius: 25px; cursor: pointer; font-weight: bold;">
     💬 Chat with us
 </div>
-<div class="chat-box" id="chatBox">
+<div class="chat-box" id="chatBox" style="display: none; position: fixed; bottom: 80px; right: 20px; width: 320px; background: #ffffff; padding: 15px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); max-height: 400px; overflow-y: auto;">
 <div class="chat-messages" id="chatMessages"></div>
-<input id="userMessage" onkeydown="if(event.key === 'Enter') sendMessage()" placeholder="Type your message..." type="text"/>
-<button onclick="sendMessage()">Send</button>
+<input id="userMessage" onkeydown="if(event.key === 'Enter') sendMessage()" placeholder="Type your message..." style="width: 80%; padding: 8px;" type="text"/>
+<button onclick="sendMessage()" style="width: 18%; background: #4b0082; color: #fff; border: none; cursor: pointer;">Send</button>
 </div>
 <script>
-function toggleChat() {
-    const chatBox = document.getElementById('chatBox');
-    chatBox.classList.toggle('open');
-}
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelector(".chat-widget").addEventListener("click", function() {
+        const chatBox = document.getElementById("chatBox");
+        chatBox.style.display = chatBox.style.display === "none" ? "flex" : "none";
+    });
+});
 
 function sendMessage() {
     const userMessage = document.getElementById('userMessage').value.trim();
@@ -316,8 +151,9 @@ function sendMessage() {
 
     const chatMessages = document.getElementById('chatMessages');
     const userDiv = document.createElement('div');
-    userDiv.classList.add('chat-message', 'user');
-    userDiv.textContent = userMessage;
+    userDiv.classList.add('chat-message');
+    userDiv.style.color = '#4b0082';
+    userDiv.textContent = "You: " + userMessage;
     chatMessages.appendChild(userDiv);
 
     const botDiv = document.createElement('div');
