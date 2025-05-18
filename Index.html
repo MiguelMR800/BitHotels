@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="BitHotels - Crypto-Friendly Hotels" name="description"/>
+<title>BitHotels - Crypto-Friendly Hotels</title>
+<style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background: linear-gradient(to bottom, #f46b45, #eea849); 
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            padding: 20px;
+            margin: 0;
+        }
+        .header {
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            max-width: 800px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .header img { width: 250px; }
+        .hotel-card {
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            margin: 10px;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .hotel-card img { width: 100%; border-radius: 15px; }
+        .chat-widget { z-index: 1000; 
+            position: fixed; 
+            bottom: 20px; 
+            right: 20px; 
+            background: #4b0082; 
+            color: #fff; 
+            padding: 10px 20px; 
+            border-radius: 50px; 
+            cursor: pointer; 
+        }
+        .chat-box {
+            display: none; 
+            position: fixed; 
+            bottom: 80px; 
+            right: 20px; 
+            width: 300px; 
+            background: #fff; 
+            padding: 15px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+    
+.header {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.header p {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #4b0082;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #5a00a3;
+}
+</style>
+<style>
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #4b0082;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s;
+}
+
+.chat-widget:hover {
+    background: #5a00a3;
+}
+
+.chat-box {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 320px;
+    max-height: 400px;
+    background: #ffffff;
+    color: #000;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    flex-direction: column;
+    transition: opacity 0.4s, transform 0.4s;
+}
+.chat-box.open {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+.chat-messages {
+    max-height: 300px;
+    overflow-y: auto;
+}
+</style>
+</head>
+<body>
+<div class="header">
+<img alt="BitHotels Logo" src="BitHotels_Logo.png"/>
+<h1>BitHotels - Crypto-Friendly Hotels</h1>
+<p>
+Explore a world of travel freedom with BitHotels. Discover exclusive destinations that accept cryptocurrency payments, 
+offering you secure, fast, and borderless transactions. Say goodbye to hidden fees and currency conversion costs. Travel smarter, pay with crypto.
+</p>
+<a class="cta-button" href="BitHotels_Blog.html">Explore Our Crypto-Friendly Hotel Collection</a></div>
+<div class="hotel-card">
+<img alt="Luxury Beach Hotel" src="Luxury_Beach_Hotel.jpg"/>
+<h2>Luxury Beach Hotel</h2>
+<p>A luxurious beachfront destination offering world-class amenities and stunning ocean views. Enjoy the sun, sea, and the best of tropical hospitality.</p>
+<a href="https://expedia.com/affiliate/ew7YoPz">Book Now</a>
+</div>
+<div class="hotel-card">
+<img alt="City Lights Hotel" src="City_Lights_Hotel.jpg"/>
+<h2>City Lights Hotel</h2>
+<p>An upscale city-center hotel with modern facilities, breathtaking city views, and a vibrant nightlife just outside your door.</p>
+<a href="https://expedia.com/affiliate/ew7YoPz">Book Now</a>
+</div>
+<div class="hotel-card">
+<img alt="Mountain Retreat" src="Mountain_Retreat.jpg"/>
+<h2>Mountain Retreat</h2>
+<p>A tranquil mountain retreat perfect for nature lovers, offering cozy cabins, scenic views, and outdoor activities.</p>
+<a href="https://locktrip.com?refId=435404">Book Now</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="chat-widget" onclick="toggleChat()">
+<span>💬</span><span>Chat with us</span>
+</div>
+<div class="chat-box" id="chatBox" style="display: none;">
+<div class="chat-messages" id="chatMessages"></div>
+<input id="userMessage" onkeydown="if(event.key === 'Enter') sendMessage()" placeholder="Type your message..." type="text"/>
+<button onclick="sendMessage()">Send</button>
+</div>
+<script>
+function toggleChat() {
+    const chatBox = document.getElementById('chatBox');
+    chatBox.classList.toggle('open');
+}
+
+function sendMessage() {
+    const userMessage = document.getElementById('userMessage').value.trim();
+    if (userMessage === "") return;
+
+    const chatMessages = document.getElementById('chatMessages');
+    const userDiv = document.createElement('div');
+    userDiv.classList.add('chat-message', 'user');
+    userDiv.textContent = userMessage;
+    chatMessages.appendChild(userDiv);
+
+    const botDiv = document.createElement('div');
+    botDiv.classList.add('chat-message');
+    botDiv.textContent = getBotResponse(userMessage);
+    chatMessages.appendChild(botDiv);
+
+    document.getElementById('userMessage').value = "";
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function getBotResponse(message) {
+    message = message.toLowerCase();
+    if (message.includes("crypto")) {
+        return "You can pay with Bitcoin, Ethereum, and other popular cryptocurrencies.";
+    } else if (message.includes("discount")) {
+        return "Some hotels offer discounts for crypto payments. Check each listing.";
+    } else if (message.includes("cancel")) {
+        return "Cancellation policies depend on the hotel. Please check your booking details.";
+    } else {
+        return "I'm here to help with your crypto-friendly booking!";
+    }
+}
+</script>
+</body>
+</html>
