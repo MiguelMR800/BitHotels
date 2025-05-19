@@ -5,11 +5,15 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>BitHotels - Crypto-Friendly Hotels</title>
+
+<!-- Open Graph and Twitter Metadata -->
 <meta property="og:title" content="BitHotels - Crypto-Friendly Hotels"/>
 <meta property="og:description" content="Explore a world of travel freedom with BitHotels. Discover exclusive destinations that accept cryptocurrency payments."/>
-<meta property="og:image" content="BitHotels_Logo_WhatsApp_Optimized.png"/>
+<meta property="og:image" content="https://miguelmr800.github.io/BitHotels/BitHotels_Logo_Optimized.png"/>
 <meta property="og:url" content="https://miguelmr800.github.io/BitHotels/"/>
 <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://miguelmr800.github.io/BitHotels/BitHotels_Logo_Optimized.png"/>
+
 <style>
 body { 
     font-family: Arial, sans-serif; 
@@ -29,20 +33,17 @@ body {
     text-align: center;
     max-width: 800px;
     margin-bottom: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .header img { width: 250px; }
 
 .hotel-card {
     background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
     padding: 15px;
     margin: 10px;
     width: 90%;
     max-width: 500px;
     border-radius: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .hotel-card img { width: 100%; border-radius: 15px; }
@@ -56,6 +57,45 @@ body {
     border-radius: 10px;
     width: 90%;
     max-width: 800px;
+}
+
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #4b0082;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s;
+}
+
+.chat-widget:hover {
+    background: #5a00a3;
+}
+
+.chat-box {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 320px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+}
+
+.chat-messages {
+    max-height: 250px;
+    overflow-y: auto;
+    margin-bottom: 10px;
 }
 </style>
 </head>
@@ -91,5 +131,36 @@ body {
     <p>&copy; 2025 BitHotels. All rights reserved.<br>
     This website is for informational purposes only. Crypto payments are subject to terms and conditions of each hotel.</p>
 </div>
+
+<div class="chat-widget" onclick="toggleChat()">💬 Chat with us</div>
+<div class="chat-box" id="chatBox">
+    <div class="chat-messages" id="chatMessages"></div>
+    <input id="userMessage" onkeydown="if(event.key === 'Enter') sendMessage()" placeholder="Type your message..." style="width: 80%; padding: 8px;" type="text"/>
+    <button onclick="sendMessage()" style="width: 18%;">Send</button>
+</div>
+
+<script>
+function toggleChat() {
+    const chatBox = document.getElementById("chatBox");
+    chatBox.style.display = chatBox.style.display === "none" ? "flex" : "none";
+}
+
+function sendMessage() {
+    const userMessage = document.getElementById('userMessage').value.trim();
+    if (userMessage === "") return;
+
+    const chatMessages = document.getElementById('chatMessages');
+    const userDiv = document.createElement('div');
+    userDiv.textContent = "You: " + userMessage;
+    chatMessages.appendChild(userDiv);
+
+    const botDiv = document.createElement('div');
+    botDiv.textContent = "Hello! How can I help you with your crypto-friendly booking?";
+    chatMessages.appendChild(botDiv);
+
+    document.getElementById('userMessage').value = "";
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+</script>
 </body>
 </html>
