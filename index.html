@@ -17,14 +17,13 @@
 <style>
 body { 
     font-family: Arial, sans-serif; 
-    background: linear-gradient(to bottom, #ff5e62, #ff9966, #fdbb2d);
+    background: linear-gradient(to bottom, #f46b45, #eea849); 
     display: flex; 
     flex-direction: column;
     align-items: center; 
     padding: 20px;
     margin: 0;
 }
-
 
 .header {
     background: rgba(255, 255, 255, 0.3);
@@ -105,7 +104,6 @@ body {
     <img alt="BitHotels Logo" src="BitHotels_Logo.png"/>
     <h1>BitHotels - Crypto-Friendly Hotels</h1>
     <p>Explore a world of travel freedom with BitHotels. Discover exclusive destinations that accept cryptocurrency payments.</p>
-    <a href="BitHotels_Blog.html" style="display: inline-block; margin-top: 10px; padding: 12px 25px; background: #ffcc00; color: #4b0082; text-decoration: none; font-weight: bold; border-radius: 25px;">Visit Our Blog</a>
 </div>
 
 <div class="hotel-card">
@@ -132,19 +130,6 @@ body {
 <div class="footer">
     <p>&copy; 2025 BitHotels. All rights reserved.<br>
     This website is for informational purposes only. Crypto payments are subject to terms and conditions of each hotel.</p>
-    
-    <!-- Sosiaalisen median linkit (WhatsApp, Twitter, Email) -->
-    <div class="social-links" style="text-align: center; margin-top: 10px;">
-        <a href="https://api.whatsapp.com/send?text=Explore%20BitHotels" target="_blank">
-            <img src="BitHotels_Logo_WhatsApp_Optimized.png" alt="WhatsApp" width="32" height="32">
-        </a>
-        <a href="https://twitter.com/intent/tweet?text=Check%20out%20BitHotels%20-%20Crypto-Friendly%20Hotels!&url=https://miguelmr800.github.io/BitHotels/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Twitter-logo.svg" alt="Twitter" width="32" height="32">
-        </a>
-        <a href="mailto:?subject=BitHotels&body=Discover%20crypto-friendly%20hotels%20at%20BitHotels!%20https://miguelmr800.github.io/BitHotels/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Email_icon.svg" alt="Email" width="32" height="32">
-        </a>
-    </div>
 </div>
 
 <div class="chat-widget" onclick="toggleChat()">💬 Chat with us</div>
@@ -153,7 +138,6 @@ body {
     <input id="userMessage" onkeydown="if(event.key === 'Enter') sendMessage()" placeholder="Type your message..." style="width: 80%; padding: 8px;" type="text"/>
     <button onclick="sendMessage()" style="width: 18%;">Send</button>
 </div>
-
 
 <script>
 function toggleChat() {
