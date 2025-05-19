@@ -37,23 +37,6 @@ body {
 
 .header img { width: 250px; }
 
-.cta-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 12px 25px;
-    background: #ffcc00;
-    color: #4b0082;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 25px;
-    transition: background 0.3s;
-}
-
-.cta-button:hover {
-    background: #ffd700;
-    color: #4b0082;
-}
-
 .hotel-card {
     background: rgba(255, 255, 255, 0.3);
     padding: 15px;
@@ -75,6 +58,45 @@ body {
     width: 90%;
     max-width: 800px;
 }
+
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #4b0082;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s;
+}
+
+.chat-widget:hover {
+    background: #5a00a3;
+}
+
+.chat-box {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 320px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+}
+
+.chat-messages {
+    max-height: 250px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
 </style>
 </head>
 <body>
@@ -82,7 +104,6 @@ body {
     <img alt="BitHotels Logo" src="BitHotels_Logo.png"/>
     <h1>BitHotels - Crypto-Friendly Hotels</h1>
     <p>Explore a world of travel freedom with BitHotels. Discover exclusive destinations that accept cryptocurrency payments.</p>
-    <a href="blogi.html" class="cta-button">Visit Our Blog</a>
 </div>
 
 <div class="hotel-card">
@@ -110,5 +131,36 @@ body {
     <p>&copy; 2025 BitHotels. All rights reserved.<br>
     This website is for informational purposes only. Crypto payments are subject to terms and conditions of each hotel.</p>
 </div>
+
+<div class="chat-widget" onclick="toggleChat()">💬 Chat with us</div>
+<div class="chat-box" id="chatBox">
+    <div class="chat-messages" id="chatMessages"></div>
+    <input id="userMessage" onkeydown="if(event.key === 'Enter') sendMessage()" placeholder="Type your message..." style="width: 80%; padding: 8px;" type="text"/>
+    <button onclick="sendMessage()" style="width: 18%;">Send</button>
+</div>
+
+<script>
+function toggleChat() {
+    const chatBox = document.getElementById("chatBox");
+    chatBox.style.display = chatBox.style.display === "none" ? "flex" : "none";
+}
+
+function sendMessage() {
+    const userMessage = document.getElementById('userMessage').value.trim();
+    if (userMessage === "") return;
+
+    const chatMessages = document.getElementById('chatMessages');
+    const userDiv = document.createElement('div');
+    userDiv.textContent = "You: " + userMessage;
+    chatMessages.appendChild(userDiv);
+
+    const botDiv = document.createElement('div');
+    botDiv.textContent = "Hello! How can I help you with your crypto-friendly booking?";
+    chatMessages.appendChild(botDiv);
+
+    document.getElementById('userMessage').value = "";
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+</script>
 </body>
 </html>
