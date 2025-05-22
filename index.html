@@ -195,43 +195,30 @@ offering you secure, fast, and borderless transactions. Say goodbye to hidden fe
   <a href="https://www.travala.com/ref/3PXWD3">Book Now</a>
 </div>
 
-<div class="chat-box" id="chatBox">
-<h3>How can I help you with your crypto-friendly booking?</h3>
-<ul>
-<li><button onclick="respondToQuestion('How do I pay with crypto?')">How do I pay with crypto?</button></li>
-<li><button onclick="respondToQuestion('What are the supported cryptocurrencies?')">What are the supported cryptocurrencies?</button></li>
-<li><button onclick="respondToQuestion('Are there any discounts for crypto payments?')">Are there any discounts for crypto payments?</button></li>
-</ul>
-<button onclick="toggleChat()">Close</button>
-</div>
 <script>
         function toggleChat() {
             const chatBox = document.getElementById('chatBox');
             chatBox.style.display = chatBox.style.display === 'none' ? 'block' : 'none';
         }
 
-        function respondToQuestion(question) {
-            const responses = {
-                'How do I pay with crypto?': 'To pay with crypto, choose a hotel, select crypto as your payment method, and complete the transaction with your crypto wallet.',
-                'What are the supported cryptocurrencies?': 'We support Bitcoin (BTC), Ethereum (ETH), Binance Coin (BNB), USDT (Tether), and USD Coin (USDC).',
-                'Are there any discounts for crypto payments?': 'Some hotels may offer exclusive discounts for crypto payments. Please check the hotel details.'
-            };
+        
+function respondToQuestion(question) {
+  const responses = {
+    'How do I pay with crypto?': 'You can pay with crypto by selecting your hotel, choosing crypto at checkout, and completing payment with your wallet.',
+    'What are the supported cryptocurrencies?': 'We support BTC, ETH, BNB, USDT, and USDC.',
+    'Are there any discounts for crypto payments?': 'Some hotels may offer discounts for crypto – check the hotel page for details.',
+    'What destinations support crypto?': 'Popular destinations like beach resorts, mountain cabins, and city hotels support crypto bookings.',
+    'Can I book anonymously?': 'Yes, platforms like LockTrip allow more private booking without full KYC in some cases.'
+  };
+
+  alert(responses[question] || 'We’ll get back to you soon!');
+}
+;
             alert(responses[question] || 'Sorry, I cannot answer that question right now.');
         }
 </script>
 
 <div class="chat-widget" onclick="toggleChat()">💬 Need travel help?</div>
-
-<div class="chat-box" id="chatBox">
-  <h3>How can we help you?</h3>
-  <ul>
-    <li><button onclick="respondToQuestion('How do I pay with crypto?')">How do I pay with crypto?</button></li>
-    <li><button onclick="respondToQuestion('What destinations support crypto?')">What destinations support crypto?</button></li>
-    <li><button onclick="respondToQuestion('Can I book anonymously?')">Can I book anonymously?</button></li>
-  </ul>
-  <button onclick="toggleChat()">Close</button>
-</div>
-
 
 <script>
 function toggleChat() {
@@ -239,12 +226,19 @@ function toggleChat() {
   chatBox.style.display = chatBox.style.display === 'none' ? 'block' : 'none';
 }
 
+
 function respondToQuestion(question) {
   const responses = {
-    'How do I pay with crypto?': 'You can book using BTC, ETH, and more on supported platforms like Travala.',
-    'What destinations support crypto?': 'Most major cities now offer crypto-friendly hotel options.',
-    'Can I book anonymously?': 'Some platforms like LockTrip allow bookings without full KYC – check individual listings.'
+    'How do I pay with crypto?': 'You can pay with crypto by selecting your hotel, choosing crypto at checkout, and completing payment with your wallet.',
+    'What are the supported cryptocurrencies?': 'We support BTC, ETH, BNB, USDT, and USDC.',
+    'Are there any discounts for crypto payments?': 'Some hotels may offer discounts for crypto – check the hotel page for details.',
+    'What destinations support crypto?': 'Popular destinations like beach resorts, mountain cabins, and city hotels support crypto bookings.',
+    'Can I book anonymously?': 'Yes, platforms like LockTrip allow more private booking without full KYC in some cases.'
   };
+
+  alert(responses[question] || 'We’ll get back to you soon!');
+}
+;
   alert(responses[question] || 'We’ll get back to you soon!');
 }
 </script>
