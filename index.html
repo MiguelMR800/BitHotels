@@ -86,7 +86,6 @@
 .header h1 {
     font-size: 2rem;
     color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .header p {
@@ -109,6 +108,54 @@
 .cta-button:hover {
     background: #5a00a3;
 }
+
+.chat-widget {
+    z-index: 1000;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #4b0082;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    font-weight: bold;
+}
+
+.chat-box {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+.chat-box h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: #4b0082;
+}
+.chat-box button {
+    background: #f46b45;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+    margin: 5px 0;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.2s;
+}
+.chat-box button:hover {
+    background: #eea849;
+}
+
 </style>
 </head>
 <body>
@@ -172,6 +219,36 @@ offering you secure, fast, and borderless transactions. Say goodbye to hidden fe
             alert(responses[question] || 'Sorry, I cannot answer that question right now.');
         }
 </script>
+
+<div class="chat-widget" onclick="toggleChat()">💬 Need travel help?</div>
+
+<div class="chat-box" id="chatBox">
+  <h3>How can we help you?</h3>
+  <ul>
+    <li><button onclick="respondToQuestion('How do I pay with crypto?')">How do I pay with crypto?</button></li>
+    <li><button onclick="respondToQuestion('What destinations support crypto?')">What destinations support crypto?</button></li>
+    <li><button onclick="respondToQuestion('Can I book anonymously?')">Can I book anonymously?</button></li>
+  </ul>
+  <button onclick="toggleChat()">Close</button>
+</div>
+
+
+<script>
+function toggleChat() {
+  const chatBox = document.getElementById('chatBox');
+  chatBox.style.display = chatBox.style.display === 'none' ? 'block' : 'none';
+}
+
+function respondToQuestion(question) {
+  const responses = {
+    'How do I pay with crypto?': 'You can book using BTC, ETH, and more on supported platforms like Travala.',
+    'What destinations support crypto?': 'Most major cities now offer crypto-friendly hotel options.',
+    'Can I book anonymously?': 'Some platforms like LockTrip allow bookings without full KYC – check individual listings.'
+  };
+  alert(responses[question] || 'We’ll get back to you soon!');
+}
+</script>
+
 </body>
 </html>
 <div class="footer" style="text-align: center; margin-top: 20px; font-size: 0.9rem; color: #ffffff;">
