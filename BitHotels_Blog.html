@@ -162,7 +162,8 @@ this guide will help you understand how to use crypto for your next booking.
 <li><button onclick="respondToQuestion('What destinations support crypto?')">What destinations support crypto?</button></li>
 <li><button onclick="respondToQuestion('Can I book anonymously?')">Can I book anonymously?</button></li>
 </ul>
-<button onclick="toggleChat()">Close</button>
+<div id="chatResponse" style="margin-top:10px; font-size: 0.9rem;"></div>
+  <button onclick="toggleChat()">Close</button>
 </div>
 
 <script>
@@ -190,6 +191,12 @@ function respondToQuestion(question) {
 }
 
 </script>
+
+
+<div class="footer" style="text-align: center; margin-top: 30px; font-size: 0.9rem; color: #ffffff;">
+  <p>© 2025 BitHotels. All rights reserved.<br/>
+  This website is for informational purposes only. Crypto payments are subject to terms and conditions of each hotel.</p>
+</div>
 
 </body>
 </html>

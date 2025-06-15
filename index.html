@@ -226,8 +226,20 @@ offering you secure, fast, and borderless transactions. Say goodbye to hidden fe
 <li><button onclick="respondToQuestion('What destinations support crypto?')">What destinations support crypto?</button></li>
 <li><button onclick="respondToQuestion('Can I book anonymously?')">Can I book anonymously?</button></li>
 </ul>
-<button onclick="toggleChat()">Close</button>
+<div id="chatResponse" style="margin-top:10px; font-size: 0.9rem;"></div>
+  <button onclick="toggleChat()">Close</button>
 </div>
+
+
+
+
+
+
+<div class="footer" style="text-align: center; margin-top: 30px; font-size: 0.9rem; color: #ffffff;">
+  <p>© 2025 BitHotels. All rights reserved.<br/>
+  This website is for informational purposes only. Crypto payments are subject to terms and conditions of each hotel.</p>
+</div>
+
 
 <script>
 function toggleChat() {
@@ -238,19 +250,6 @@ function toggleChat() {
     chatBox.style.display = 'none';
   }
 }
-
-
-;
-  const responseDiv = document.getElementById('chatResponse');
-  responseDiv.innerHTML = '<strong>Bot:</strong> ' + (responses[question] || 'We’ll get back to you soon!');
-}
-
-
-;
-  const responseDiv = document.getElementById('chatResponse');
-  responseDiv.innerHTML = '<strong>Bot:</strong> ' + (responses[question] || 'We’ll get back to you soon!');
-}
-
 
 function respondToQuestion(question) {
   const responses = {
@@ -263,14 +262,8 @@ function respondToQuestion(question) {
   const responseDiv = document.getElementById('chatResponse');
   responseDiv.innerHTML = '<strong>Bot:</strong> ' + (responses[question] || 'We’ll get back to you soon!');
 }
-
 </script>
 
-
-<div class="footer" style="text-align: center; margin-top: 20px; font-size: 0.9rem; color: #ffffff;">
-  <p>© 2025 BitHotels. All rights reserved.<br/>
-  This website is for informational purposes only. Crypto payments are subject to terms and conditions of each hotel.</p>
-</div>
 </body>
 </html>
 
