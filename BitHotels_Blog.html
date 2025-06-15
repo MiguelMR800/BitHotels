@@ -31,7 +31,7 @@ body {
     background-image: url('bg.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    
     background-repeat: no-repeat;
     color: #ffffff;
     position: relative;
@@ -175,6 +175,8 @@ function toggleChat() {
   }
 }
 
+
+
 function respondToQuestion(question) {
   const responses = {
     'How do I pay with crypto?': 'You can pay with crypto by selecting your hotel, choosing crypto at checkout, and completing payment with your wallet.',
@@ -183,8 +185,10 @@ function respondToQuestion(question) {
     'What destinations support crypto?': 'Popular destinations like beach resorts, mountain cabins, and city hotels support crypto bookings.',
     'Can I book anonymously?': 'Yes, platforms like LockTrip allow more private booking without full KYC in some cases.'
   };
-  alert(responses[question] || 'We’ll get back to you soon!');
+  const responseDiv = document.getElementById('chatResponse');
+  responseDiv.innerHTML = '<strong>Bot:</strong> ' + (responses[question] || 'We’ll get back to you soon!');
 }
+
 </script>
 
 </body>
