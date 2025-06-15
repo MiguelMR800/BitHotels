@@ -1,125 +1,33 @@
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    text-align: center;
-    color: #333;
+    font-family: Arial, sans-serif;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white;
 }
 
-header {
-    background: linear-gradient(to right, #6a0dad, #ffcc00);
-    padding: 50px 20px;
-}
-
-header img {
-    max-width: 200px;
-    margin-bottom: 20px;
-}
-
-header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
-    color: #fff;
-}
-
-header p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    color: #f0f0f0;
-}
-
-header .cta {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #ffcc00;
-    color: #6a0dad;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-header .cta:hover {
-    background-color: #ffd700;
-}
-
-section#hotels {
-    padding: 30px 20px;
-}
-
-.hotel-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.hotel {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    max-width: 90%;
-    text-align: left;
-    padding: 15px;
-    transition: transform 0.3s;
-}
-
-.hotel:hover {
-    transform: scale(1.05);
-}
-
-.hotel img {
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
     width: 100%;
-    border-radius: 10px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Optional overlay */
+    z-index: 0;
+    pointer-events: none;
 }
 
-footer {
-    background-color: #6a0dad;
-    color: #fff;
-    padding: 15px 0;
+.header, .hotel-card, .chat-widget, .chat-box {
+    position: relative;
+    z-index: 1;
 }
 
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    .hotel {
-        max-width: 95%;
-    }
-
-    header .cta {
-        padding: 10px 20px;
-        font-size: 1rem;
-    }
-
-    .cta-button {
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
-}
-
-.cta-button {
-    display: inline-block;
-    background: #4b0082;
-    color: #ffffff;
-    padding: 12px 25px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s;
-    margin-top: 10px;
-}
-
-.cta-button:hover {
-    background: #5a00a3;
-}
-
-/* Chat Widget Styles */
+/* Optional basic chat box and button styles */
 .chat-widget {
     z-index: 1000;
     position: fixed;
@@ -127,11 +35,11 @@ footer {
     right: 20px;
     background: #4b0082;
     color: #fff;
-    padding: 12px 20px;
-    border-radius: 25px;
+    padding: 10px 20px;
+    border-radius: 50px;
     cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     font-weight: bold;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .chat-box {
@@ -140,20 +48,18 @@ footer {
     bottom: 80px;
     right: 20px;
     width: 300px;
-    background: #ffffff;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.95);
     padding: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    color: #333;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     font-family: Arial, sans-serif;
+    color: #333;
 }
-
 .chat-box h3 {
     margin-top: 0;
-    color: #4b0082;
     font-size: 1.1rem;
+    color: #4b0082;
 }
-
 .chat-box button {
     background: #f46b45;
     color: white;
@@ -165,7 +71,6 @@ footer {
     width: 100%;
     transition: background 0.2s;
 }
-
 .chat-box button:hover {
     background: #eea849;
 }
