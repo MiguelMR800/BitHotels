@@ -21,7 +21,11 @@
 <style>
         body { 
             font-family: Arial, sans-serif; 
-            background: linear-gradient(to bottom, #f46b45, #eea849); 
+            background-image: url('images/bg.jpg');
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+background-repeat: no-repeat; 
             display: flex; 
             flex-direction: column;
             align-items: center; 
@@ -154,6 +158,20 @@
 }
 .chat-box button:hover {
     background: #eea849;
+}
+
+
+.header, .hotel-card, .chat-widget, .chat-box {
+    position: relative;
+    z-index: 1;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 0;
 }
 
 </style>
