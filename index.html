@@ -239,6 +239,12 @@ function toggleChat() {
 }
 
 
+;
+  const responseDiv = document.getElementById('chatResponse');
+  responseDiv.innerHTML = '<strong>Bot:</strong> ' + (responses[question] || 'We’ll get back to you soon!');
+}
+
+
 function respondToQuestion(question) {
   const responses = {
     'How do I pay with crypto?': 'You can pay with crypto by selecting your hotel, choosing crypto at checkout, and completing payment with your wallet.',
@@ -252,9 +258,11 @@ function respondToQuestion(question) {
 }
 
 </script>
+
+
 <div class="footer" style="text-align: center; margin-top: 20px; font-size: 0.9rem; color: #ffffff;">
-<p>© 2025 BitHotels. All rights reserved.<br/>
-    This website is for informational purposes only. Crypto payments are subject to terms and conditions of each hotel.</p>
+  <p>© 2025 BitHotels. All rights reserved.<br/>
+  This website is for informational purposes only. Crypto payments are subject to terms and conditions of each hotel.</p>
 </div>
 </body>
 </html>
