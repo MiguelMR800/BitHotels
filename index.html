@@ -23,7 +23,7 @@
             font-family: Arial, sans-serif; 
             background-image: url('https://miguelmr800.github.io/BitHotels/bg.jpg');
 background-size: cover;
-background-attachment: fixed;
+
 background-position: center;
 background-repeat: no-repeat; 
             display: flex; 
@@ -160,6 +160,21 @@ background-repeat: no-repeat;
     background: #eea849;
 }
 
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('https://miguelmr800.github.io/BitHotels/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  pointer-events: none;
+}
 </style>
 </head>
 <body>
@@ -223,6 +238,7 @@ function toggleChat() {
   }
 }
 
+
 function respondToQuestion(question) {
   const responses = {
     'How do I pay with crypto?': 'You can pay with crypto by selecting your hotel, choosing crypto at checkout, and completing payment with your wallet.',
@@ -231,8 +247,10 @@ function respondToQuestion(question) {
     'What destinations support crypto?': 'Popular destinations like beach resorts, mountain cabins, and city hotels support crypto bookings.',
     'Can I book anonymously?': 'Yes, platforms like LockTrip allow more private booking without full KYC in some cases.'
   };
-  alert(responses[question] || 'We’ll get back to you soon!');
+  const responseDiv = document.getElementById('chatResponse');
+  responseDiv.innerHTML = '<strong>Bot:</strong> ' + (responses[question] || 'We’ll get back to you soon!');
 }
+
 </script>
 <div class="footer" style="text-align: center; margin-top: 20px; font-size: 0.9rem; color: #ffffff;">
 <p>© 2025 BitHotels. All rights reserved.<br/>
