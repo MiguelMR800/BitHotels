@@ -1,37 +1,135 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="BitHotels - Crypto-Friendly Hotels Blog" name="description"/>
+<meta name="description" content="BitHotels - Crypto-Friendly Hotels Blog. Learn how to use cryptocurrency to book hotels securely, quickly, and globally."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://miguelmr800.github.io/BitHotels/BitHotels_Blog.html"/>
 <title>BitHotels - Crypto-Friendly Hotels Blog</title>
+
+<!-- Open Graph for Facebook -->
+<meta property="og:title" content="BitHotels - Crypto-Friendly Hotels Blog"/>
+<meta property="og:description" content="Learn how to use cryptocurrency to book hotels securely, quickly, and globally."/>
+<meta property="og:image" content="https://miguelmr800.github.io/BitHotels/BitHotels_Logo.png"/>
+<meta property="og:url" content="https://miguelmr800.github.io/BitHotels/BitHotels_Blog.html"/>
+<meta property="og:type" content="website"/>
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="BitHotels - Crypto-Friendly Hotels Blog"/>
+<meta name="twitter:description" content="Learn how to use cryptocurrency to book hotels securely, quickly, and globally."/>
+<meta name="twitter:image" content="https://miguelmr800.github.io/BitHotels/BitHotels_Logo.png"/>
+<meta name="twitter:url" content="https://miguelmr800.github.io/BitHotels/BitHotels_Blog.html"/>
+
 <style>
-        body { font-family: Arial, sans-serif; background: linear-gradient(to bottom, #f46b45, #eea849); padding: 20px; color: #ffffff; }
-        .content { max-width: 800px; margin: 0 auto; background: rgba(0, 0, 0, 0.7); padding: 20px; border-radius: 10px; }
-        h1 { text-align: center; color: #FFD700; }
-        h2 { color: #FFFFFF; }
-        ul { list-style-type: none; padding: 0; }
-        ul li { margin-bottom: 10px; }
-        a { color: #FFD700; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .back-button { display: block; text-align: center; margin-top: 20px; }
-    </style>
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+    pointer-events: none;
+}
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+h1 { text-align: center; color: #FFD700; }
+h2 { color: #FFFFFF; }
+ul { list-style-type: none; padding: 0; }
+ul li { margin-bottom: 10px; }
+a { color: #FFD700; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.back-button { display: block; text-align: center; margin-top: 20px; }
+
+.chat-widget {
+    z-index: 1000;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #4b0082;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    font-weight: bold;
+}
+
+.chat-box {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    color: #333;
+    z-index: 1001;
+}
+.chat-box h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: #4b0082;
+}
+.chat-box button {
+    background: #f46b45;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+    margin: 5px 0;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.2s;
+}
+.chat-box button:hover {
+    background: #eea849;
+}
+</style>
 </head>
 <body>
 <div class="content">
-<h1>BitHotels - Crypto-Friendly Hotels Blog</h1><p>
+<h1>BitHotels - Crypto-Friendly Hotels Blog</h1>
+<p>
 Cryptocurrency is revolutionizing the travel industry, offering a fast, secure, and borderless way to pay for your stays. 
 At BitHotels, we aim to provide a seamless experience for those who prefer using digital assets. Whether you are an experienced crypto user or a newcomer, 
 this guide will help you understand how to use crypto for your next booking.
 </p>
 <p>Welcome to BitHotels, your guide to booking hotels using cryptocurrency. Discover the advantages of using digital assets for your travels and learn how to make secure and fast payments with crypto.</p>
+
 <h2>Supported Wallets</h2>
 <ul>
 <li>MetaMask</li>
 <li>Trust Wallet</li>
 <li>Coinbase Wallet</li>
 </ul>
+
 <h2>Supported Cryptocurrencies</h2>
 <ul>
 <li>Bitcoin (BTC)</li>
@@ -40,11 +138,54 @@ this guide will help you understand how to use crypto for your next booking.
 <li>USDT (Tether)</li>
 <li>USD Coin (USDC)</li>
 </ul>
+
 <h2>How to Pay with Crypto</h2>
-<p>1. Choose your hotel from BitHotels.<br/>2. Select your payment method as cryptocurrency.<br/>3. Connect your crypto wallet and confirm the payment.</p>
+<p>
+1. Choose your hotel from BitHotels.<br/>
+2. Select your payment method as cryptocurrency.<br/>
+3. Connect your crypto wallet and confirm the payment.
+</p>
+
 <div class="back-button">
-<a href="index.html">Return to Crypto-Friendly Hotels</a>
+<a href="index.html">← Return to Crypto-Friendly Hotels</a>
 </div>
 </div>
+
+<div class="chat-widget" onclick="toggleChat()">💬 Need travel help?</div>
+
+<div class="chat-box" id="chatBox" style="display: none;">
+<h3>How can we help you?</h3>
+<ul>
+<li><button onclick="respondToQuestion('How do I pay with crypto?')">How do I pay with crypto?</button></li>
+<li><button onclick="respondToQuestion('What are the supported cryptocurrencies?')">What are the supported cryptocurrencies?</button></li>
+<li><button onclick="respondToQuestion('Are there any discounts for crypto payments?')">Are there any discounts for crypto payments?</button></li>
+<li><button onclick="respondToQuestion('What destinations support crypto?')">What destinations support crypto?</button></li>
+<li><button onclick="respondToQuestion('Can I book anonymously?')">Can I book anonymously?</button></li>
+</ul>
+<button onclick="toggleChat()">Close</button>
+</div>
+
+<script>
+function toggleChat() {
+  const chatBox = document.getElementById('chatBox');
+  if (chatBox.style.display === 'none' || chatBox.style.display === '') {
+    chatBox.style.display = 'block';
+  } else {
+    chatBox.style.display = 'none';
+  }
+}
+
+function respondToQuestion(question) {
+  const responses = {
+    'How do I pay with crypto?': 'You can pay with crypto by selecting your hotel, choosing crypto at checkout, and completing payment with your wallet.',
+    'What are the supported cryptocurrencies?': 'We support BTC, ETH, BNB, USDT, and USDC.',
+    'Are there any discounts for crypto payments?': 'Some hotels may offer discounts for crypto – check the hotel page for details.',
+    'What destinations support crypto?': 'Popular destinations like beach resorts, mountain cabins, and city hotels support crypto bookings.',
+    'Can I book anonymously?': 'Yes, platforms like LockTrip allow more private booking without full KYC in some cases.'
+  };
+  alert(responses[question] || 'We’ll get back to you soon!');
+}
+</script>
+
 </body>
 </html>
