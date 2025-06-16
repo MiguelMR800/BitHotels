@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     padding: 0;
@@ -13,7 +12,7 @@ body {
 
 body::before {
     content: "";
-    position: fixed;
+    position: absolute;
     top: 0; left: 0;
     width: 100%;
     height: 100%;
@@ -30,7 +29,7 @@ body::before {
 /* Optional basic chat box and button styles */
 .chat-widget {
     z-index: 1000;
-    position: fixed;
+    position: absolute;
     bottom: 20px;
     right: 20px;
     background: #4b0082;
@@ -44,7 +43,7 @@ body::before {
 
 .chat-box {
     display: none;
-    position: fixed;
+    position: absolute;
     bottom: 80px;
     right: 20px;
     width: 300px;
