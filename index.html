@@ -119,13 +119,6 @@
   color: #ffffff;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
 }
-
-.hotel-card h2,
-.hotel-card p,
-.hotel-card a {
-  color: #ffffff;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
-}
 </style>
 </head>
 <body>
@@ -175,14 +168,19 @@ offering you secure, fast, and borderless transactions. Say goodbye to hidden fe
 <div class="feedback-section" style="max-width:600px; margin: 30px auto; background: rgba(255,255,255,0.2); padding: 20px; border-radius: 15px; color: #fff; text-align: center;">
   <h2 style="color:#FFD700;">Give Us Feedback</h2>
   <p style="margin-bottom: 15px;">We'd love to hear your thoughts on BitHotels. Your feedback helps us improve!</p>
-  <form action="https://formsubmit.co/migumiguelmr@gmail.com" method="POST">
-    <input type="hidden" name="_subject" value="New BitHotels Feedback!">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <textarea name="feedback" placeholder="Write your feedback here..." required style="width: 100%; height: 100px; padding: 10px; border-radius: 8px; border: none; margin-bottom: 10px;"></textarea><br>
-    <input type="email" name="email" placeholder="Your email (optional)" style="width: 100%; padding: 10px; border-radius: 8px; border: none; margin-bottom: 10px;"><br>
-    <button type="submit" style="background: #4b0082; color: white; padding: 10px 20px; border: none; border-radius: 25px; cursor: pointer;">Submit Feedback</button>
-  </form>
+  
+<form action="https://formsubmit.co/migumiguelmr@gmail.com" method="POST">
+  <input type="hidden" name="_subject" value="New BitHotels Feedback!">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  <input type="text" name="_honey" style="display:none">
+  <input type="hidden" name="_next" value="https://bithotels.xyz/thankyou.html">
+
+  <textarea name="feedback" placeholder="Write your feedback here..." required style="width: 100%; height: 100px; padding: 10px; border-radius: 8px; border: none; margin-bottom: 10px;"></textarea><br>
+  <input type="email" name="email" placeholder="Your email (optional)" style="width: 100%; padding: 10px; border-radius: 8px; border: none; margin-bottom: 10px;"><br>
+  <button type="submit" style="background: #4b0082; color: white; padding: 10px 20px; border: none; border-radius: 25px; cursor: pointer;">Submit Feedback</button>
+</form>
+
 </div>
 
 <div class="footer" style="text-align: center; margin-top: 30px; font-size: 0.9rem; color: #ffffff;">
