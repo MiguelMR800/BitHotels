@@ -16,109 +16,168 @@
 <meta content="BitHotels - Crypto-Friendly Hotels" name="description"/>
 <title>BitHotels - Crypto-Friendly Hotels</title>
 <meta content="3ae52f5c-9749-4377-b7df-d013ca3c4443" name="impact-site-verification"/>
+
 <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            background-image: url('https://miguelmr800.github.io/BitHotels/bg.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-             
-            display: flex; 
-            flex-direction: column;
-            align-items: center; 
-            padding: 20px;
-            margin: 0;
-        }
-        .header {
-            background: rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 20px;
-            text-align: center;
-            max-width: 800px;
-            margin-bottom: 20px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-        .header img { width: 250px; }
-        .hotel-card {
-            color: #ffffff;
-            background: rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-            padding: 15px;
-            margin: 10px;
-            width: 90%;
-            max-width: 500px;
-            border-radius: 20px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-        .hotel-card img { width: 100%; border-radius: 15px; }
-        .chat-widget, .cta-button {
-            z-index: 1000;
-            background: #4b0082;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: bold;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        }
-        .chat-box {
-            display: none;
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            width: 300px;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 15px;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            font-family: Arial, sans-serif;
-            color: #333;
-        }
-        .chat-box h3 {
-            margin-top: 0;
-            font-size: 1.1rem;
-            color: #4b0082;
-        }
-        .chat-box button {
-            background: #f46b45;
-            color: white;
-            border: none;
-            border-radius: 20px;
-            padding: 8px 15px;
-            margin: 5px 0;
-            cursor: pointer;
-            width: 100%;
-            transition: background 0.2s;
-        }
-        .chat-box button:hover {
-            background: #eea849;
-        }
+    body { 
+        font-family: Arial, sans-serif; 
+        background-image: url('https://miguelmr800.github.io/BitHotels/bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+        padding: 20px;
+        margin: 0;
+    }
 
-  .fixed-bg {
-    background-image: url('https://miguelmr800.github.io/BitHotels/bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-  }
+    .fixed-bg {
+        background-image: url('https://miguelmr800.github.io/BitHotels/bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
 
+    .header {
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(18px);
+        border-radius: 24px;
+        padding: 22px 24px;
+        text-align: center;
+        max-width: 800px;
+        margin-bottom: 26px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    }
 
-.header p {
-  color: #ffffff;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
-}
+    .header img { 
+        width: 90%; 
+        max-width: 400px; 
+        border-radius: 20px; 
+        margin-bottom: 14px;
+    }
 
-.header h1, .header h2 {
-  color: #ffffff;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
-}
+    .header p {
+        color: #ffffff;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+        line-height: 1.6rem;
+        margin: 0 0 10px;
+    }
+
+    .header h1, .header h2 {
+        color: #ffffff;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+    }
+
+    .cta-button-container {
+        text-align: center; 
+        margin-top: 10px;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background: #4b0082;
+        color: #fff;
+        padding: 10px 24px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .cta-button:hover {
+        opacity: 0.9;
+    }
+
+    .hotel-card {
+        color: #ffffff;
+        background: rgba(255,255,255,0.08);
+        backdrop-filter: blur(20px);
+        padding: 0;
+        margin: 26px 0;
+        width: 90%;
+        max-width: 620px;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+        transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .hotel-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 25px 45px rgba(0,0,0,0.5);
+    }
+
+    .hotel-card img {
+        width: 100%;
+        height: 340px;
+        object-fit: cover;
+        border-radius: 0;
+        display: block;
+    }
+
+    .hotel-card-content {
+        padding: 22px 22px 20px;
+    }
+
+    .hotel-card h2 {
+        margin: 0 0 10px;
+        font-size: 1.6rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    .hotel-card p {
+        line-height: 1.6rem;
+        margin: 0 0 12px;
+        opacity: 0.95;
+    }
+
+    .hotel-meta {
+        font-size: 0.9rem;
+        opacity: 0.9;
+        margin-bottom: 14px;
+    }
+
+    .hotel-card a {
+        display: inline-block;
+        padding: 10px 22px;
+        border-radius: 25px;
+        background: linear-gradient(180deg,#ff8a00,#e52e71);
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
+        transition: opacity .2s;
+    }
+
+    .hotel-card a:hover {
+        opacity: 0.85;
+    }
+
+    .affiliate-note {
+        margin-top: 10px;
+        font-size: 0.78rem;
+        opacity: 0.78;
+    }
+
+    .footer,
+    .legal-disclaimer {
+        text-align: center; 
+        margin-top: 26px; 
+        font-size: 0.9rem; 
+        color: #ffffff;
+        max-width: 800px;
+    }
+
+    .legal-disclaimer {
+        font-size: 0.8rem;
+        margin-top: 10px;
+    }
 </style>
 </head>
 <body>
@@ -126,93 +185,107 @@
 <div class="fixed-bg"></div>
 
 <div class="header">
-<img alt="BitHotels Logo" src="Bithotels_Logo.png" style="width: 90%; max-width: 400px; border-radius: 20px; margin-bottom: 10px;"/>
-<p>
-Explore a world of travel freedom with BitHotels. Discover exclusive destinations that accept cryptocurrency payments, 
-offering you secure, fast, and borderless transactions. Say goodbye to hidden fees and currency conversion costs. Travel smarter, pay with crypto.
-</p>
-<div class="cta-button-container" style="text-align: center; margin-top: 10px;">
-<a class="cta-button" href="BitHotels_Blog.html" style="border-radius: 25px; text-decoration: none; font-weight: bold;">Visit Our Blog</a>
-</div>
-</div>
-
-<div class="hotel-card">
-<img alt="Luxury Beach Hotel" src="Luxury_Beach_Hotel.jpg"/>
-<h2>Luxury Beach Hotel</h2>
-<p>A luxurious beachfront destination offering world-class amenities and stunning ocean views. Enjoy the sun, sea, and the best of tropical hospitality.</p>
-<a href="https://expedia.com/affiliate/ew7YoPz">Book Now</a>
+    <img alt="BitHotels Logo" src="Bithotels_Logo.png"/>
+    <p>
+        Explore a world of travel freedom with BitHotels. Discover curated destinations that support cryptocurrency-friendly
+        bookings, enabling secure, fast and borderless payments. Avoid unnecessary currency conversion and traditional
+        banking friction when travelling internationally.
+    </p>
+    <div class="cta-button-container">
+        <a class="cta-button" href="BitHotels_Blog.html">Visit Our Blog</a>
+    </div>
 </div>
 
 <div class="hotel-card">
-<img alt="City Lights Hotel" src="City_Lights_Hotel.jpg"/>
-<h2>City Lights Hotel</h2>
-<p>An upscale city-center hotel with modern facilities, breathtaking city views, and a vibrant nightlife just outside your door.</p>
-<a href="https://expedia.com/affiliate/ew7YoPz">Book Now</a>
+    <img alt="Luxury Beach Hotel" src="Luxury_Beach_Hotel.jpg"/>
+    <div class="hotel-card-content">
+        <h2>Luxury Beach Hotel</h2>
+        <p>
+            A beachfront destination offering panoramic ocean views, modern facilities and direct access to private
+            beaches. Guests can enjoy infinity pools, coastal scenery and high-quality hospitality combined with
+            crypto-friendly booking flows aimed at international travellers.
+        </p>
+        <p class="hotel-meta">
+            <strong>Suitable for:</strong> luxury travel, couples, long-stay visits
+        </p>
+        <a href="https://expedia.com/affiliate/ew7YoPz">Book via Expedia</a>
+        <p class="affiliate-note">
+            Booking link is an affiliate partner link. We may earn a commission at no extra cost to you.
+        </p>
+    </div>
 </div>
 
 <div class="hotel-card">
-<img alt="Mountain Retreat" src="Mountain_Retreat.jpg"/>
-<h2>Mountain Retreat</h2>
-<p>A tranquil mountain retreat perfect for nature lovers, offering cozy cabins, scenic views, and outdoor activities.</p>
-<a href="https://locktrip.com?refId=435404">Book Now</a>
+    <img alt="City Lights Hotel" src="City_Lights_Hotel.jpg"/>
+    <div class="hotel-card-content">
+        <h2>City Lights Hotel</h2>
+        <p>
+            A contemporary city hotel located in a major metropolitan area, surrounded by business districts,
+            cultural landmarks and nightlife venues. Designed for short stays, business trips and efficient
+            access to city services, with crypto-supporting booking platforms reducing cross-border friction.
+        </p>
+        <p class="hotel-meta">
+            <strong>Suitable for:</strong> business travellers, weekend city breaks, urban stays
+        </p>
+        <a href="https://expedia.com/affiliate/ew7YoPz">Book via Expedia</a>
+        <p class="affiliate-note">
+            Booking link is an affiliate partner link. We may earn a commission at no extra cost to you.
+        </p>
+    </div>
 </div>
 
 <div class="hotel-card">
-<img alt="Nomad Nest Hotel" src="Digital_Nomad_Hotel.jpg"/>
-<h2>Nomad Nest Hotel</h2>
-<p>Perfect for remote workers and digital nomads. Offers fast WiFi, quiet spaces, and coworking areas in a modern setting.</p>
-<a href="https://www.travala.com/ref/3PXWD3">Book Now</a>
+    <img alt="Mountain Retreat" src="Mountain_Retreat.jpg"/>
+    <div class="hotel-card-content">
+        <h2>Mountain Retreat</h2>
+        <p>
+            A quiet, nature-focused accommodation close to hiking trails and scenic viewpoints. Ideal for
+            travellers looking for silence, privacy and outdoor activities. Crypto-enabled booking options
+            can be convenient when staying in more remote regions with limited local banking support.
+        </p>
+        <p class="hotel-meta">
+            <strong>Suitable for:</strong> nature lovers, outdoor travellers, private retreats
+        </p>
+        <a href="https://locktrip.com?refId=435404">Book via LockTrip</a>
+        <p class="affiliate-note">
+            Booking link is an affiliate partner link. We may earn a commission at no extra cost to you.
+        </p>
+    </div>
 </div>
 
-<!-- Feedback Form Section -->
-<div class="feedback-section" style="max-width:600px; margin: 30px auto; background: rgba(255,255,255,0.2); padding: 20px; border-radius: 15px; color: #fff; text-align: center;">
-  <h2 style="color:#FFD700;">Give Us Feedback</h2>
-  <p style="margin-bottom: 15px;">We'd love to hear your thoughts on BitHotels. Your feedback helps us improve!</p>
-  
-<form action="https://formsubmit.co/migumiguelmr@gmail.com" method="POST">
-  <input type="hidden" name="_subject" value="New BitHotels Feedback!">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_template" value="table">
-  <input type="text" name="_honey" style="display:none">
-  <input type="hidden" name="_next" value="https://bithotels.xyz/thankyou.html">
-
-  <textarea name="feedback" placeholder="Write your feedback here..." required style="width: 100%; height: 100px; padding: 10px; border-radius: 8px; border: none; margin-bottom: 10px;"></textarea><br>
-  <input type="email" name="email" placeholder="Your email (optional)" style="width: 100%; padding: 10px; border-radius: 8px; border: none; margin-bottom: 10px;"><br>
-  <button type="submit" style="background: #4b0082; color: white; padding: 10px 20px; border: none; border-radius: 25px; cursor: pointer;">Submit Feedback</button>
-</form>
-
+<div class="hotel-card">
+    <img alt="Nomad Nest Hotel" src="Digital_Nomad_Hotel.jpg"/>
+    <div class="hotel-card-content">
+        <h2>Nomad Nest Hotel</h2>
+        <p>
+            A digital-nomad-oriented property offering fast Wi-Fi, quiet workspaces and remote-friendly
+            amenities. Suitable for long stays and professional use, with cryptocurrency options that
+            support global mobility without relying heavily on traditional banking rails.
+        </p>
+        <p class="hotel-meta">
+            <strong>Suitable for:</strong> digital nomads, remote workers, long-term stays
+        </p>
+        <a href="https://www.travala.com/ref/3PXWD3">Book via Travala</a>
+        <p class="affiliate-note">
+            Booking link is an affiliate partner link. We may earn a commission at no extra cost to you.
+        </p>
+    </div>
 </div>
 
-<div class="footer" style="text-align: center; margin-top: 30px; font-size: 0.9rem; color: #ffffff;">
-  <p>© 2025 BitHotels. All rights reserved.<br/>
-  This website is for informational purposes only. Crypto payments are subject to terms and conditions of each hotel.</p>
+<div class="footer">
+    <p>
+        © 2025 BitHotels. All rights reserved.<br/>
+        This website is for informational purposes only. Crypto payments are subject to the terms and conditions of each hotel or booking platform.
+    </p>
 </div>
 
-<!-- Legal Disclaimer -->
-<div class="legal-disclaimer" style="text-align: center; margin-top: 20px; font-size: 0.8rem; color: #ffffff;">
-  <p>
-    BitHotels is not a booking platform. We provide curated crypto-friendly travel suggestions and affiliate links. 
-    We do not process payments or handle reservations. Users are responsible for verifying hotel terms and local regulations.
-  </p>
+<div class="legal-disclaimer">
+    <p>
+        BitHotels is not a booking platform. We provide curated crypto-friendly travel suggestions and affiliate links.
+        We do not process payments or handle reservations. Users are responsible for verifying hotel terms, local regulations
+        and crypto payment availability with each provider.
+    </p>
 </div>
 
-<script>
-function toggleChat() {
-  const chatBox = document.getElementById('chatBox');
-  chatBox.style.display = (chatBox.style.display === 'none' || chatBox.style.display === '') ? 'block' : 'none';
-}
-
-function respondToQuestion(question) {
-  const responses = {
-    'How do I pay with crypto?': 'You can pay with crypto by selecting your hotel, choosing crypto at checkout, and completing payment with your wallet.',
-    'What are the supported cryptocurrencies?': 'We support BTC, ETH, BNB, USDT, and USDC.',
-    'Are there any discounts for crypto payments?': 'Some hotels may offer discounts for crypto – check the hotel page for details.',
-    'What destinations support crypto?': 'Popular destinations like beach resorts, mountain cabins, and city hotels support crypto bookings.',
-    'Can I book anonymously?': 'Yes, platforms like LockTrip allow more private booking without full KYC in some cases.'
-  };
-  const responseDiv = document.getElementById('chatResponse');
-  responseDiv.innerHTML = '<strong>Bot:</strong> ' + (responses[question] || 'We’ll get back to you soon!');
-}
-</script>
 </body>
 </html>
